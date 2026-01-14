@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>Lista de Compras</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#28a745">
 </head>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#28a745">
 
 <body>
   <div class="container">
@@ -28,15 +29,10 @@
 
     <div class="row">
       <input type="text" id="itemName" placeholder="Item">
-
       <input type="number" id="itemQty" placeholder="Qtd" value="1" min="1">
 
       <button onclick="addItem()">➕</button>
-
-      <button id="micBtn" onclick="toggleVoice()" title="Adicionar por voz">
-        🎤
-      </button>
-
+      <button id="micBtn" onclick="toggleVoice()">🎤</button>
       <button class="btn-clear" onclick="clearAll()">🧹</button>
     </div>
 
@@ -46,6 +42,24 @@
 
     <h3>🛒 Itens Comprados</h3>
     <ul id="boughtList"></ul>
+
+    <hr>
+
+    <hr>
+
+<h3>📤 Compartilhar Lista</h3>
+
+<div class="share-box">
+  <button onclick="shareText()">📄 WhatsApp (texto)</button>
+  <button onclick="shareLink()">🔗 WhatsApp (link)</button>
+</div>
+
+
+    <hr>
+
+    <h3>🔥 Promoções por CEP</h3>
+    <input type="text" id="cep" placeholder="Digite seu CEP">
+    <button onclick="openPromos()">Ver encartes perto</button>
 
   </div>
 
