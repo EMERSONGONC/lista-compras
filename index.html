@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Compras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#28a745">
+
+<body>
+  <div class="container">
+
+    <h1>🛒 Lista de Compras</h1>
+
+    <label>Orçamento (R$)</label>
+    <input type="number" id="budget" class="input-budget" placeholder="Ex: 300">
+
+    <div class="status">
+      <p>Total gasto: R$ <span id="total">0.00</span></p>
+      <p>Saldo: R$ <span id="balance">0.00</span></p>
+    </div>
+
+    <hr>
+
+    <h3>📋 Lista de Compras</h3>
+
+    <div class="row">
+      <input type="text" id="itemName" placeholder="Item">
+
+      <input type="number" id="itemQty" placeholder="Qtd" value="1" min="1">
+
+      <button onclick="addItem()">➕</button>
+
+      <button id="micBtn" onclick="toggleVoice()" title="Adicionar por voz">
+        🎤
+      </button>
+
+      <button class="btn-clear" onclick="clearAll()">🧹</button>
+    </div>
+
+    <ul id="shoppingList"></ul>
+
+    <hr>
+
+    <h3>🛒 Itens Comprados</h3>
+    <ul id="boughtList"></ul>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
