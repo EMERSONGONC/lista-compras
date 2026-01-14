@@ -17,7 +17,7 @@ h1, h3 {
 
 input {
   padding: 6px 8px;
-  width: 50%;
+  width: 100%;
   font-size: 14px;
 }
 
@@ -35,7 +35,11 @@ input {
   margin-bottom: 10px;
 }
 
-.row input {
+.row input[type="number"] {
+  width: 60px;
+}
+
+.row input[type="text"] {
   flex: 1;
 }
 
@@ -76,7 +80,6 @@ li input {
   padding: 4px;
 }
 
-/* Botões pequenos */
 .btn-small {
   padding: 4px 6px;
   font-size: 14px;
@@ -96,12 +99,6 @@ li input {
   color: white;
 }
 
-/* Comprados */
 #boughtList li {
   background: #e8f5e9;
-}
-/* mantém tudo que você já tem */
-
-.row input[type="number"] {
-  width: 60px;
 }
